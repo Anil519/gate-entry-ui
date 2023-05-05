@@ -1,0 +1,124 @@
+<div class="container-fiuld">
+    <!-- Header -->
+    <nav class="navbar navbar-light bg-dark ">
+        <div class="d-flex">
+            <img src="../../assets/img/logo.jpeg" class="logo-width">
+            <a href="" class="list-group-item text-white fs-6 p-1">Radiance Corp | </a>&nbsp;
+            <a href="" class="list-group-item text-white fs-6 p-1"> Supplier Portal</a>
+        </div>
+
+        <div class="d-flex flex-row-reverse">
+            <div class="dropdown">
+                <button class="btn btn-transparent " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-user fa-xl text-white"></i>
+                </button>
+                <ul class="dropdown-menu ml-140">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-transparent dropdown-toggle text-white" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <span class="">Gate Entry user</span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="d-flex p-2">
+                <a href="" class="list-group-item  fs-6 p-2 text-white ">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="text-white ms-2">Gate Entry</span>
+                </a>
+                <a href="" class="list-group-item  fs-6 p-2 ms-3 text-white">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="text-white ms-2">Reports</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-end -->
+
+
+    <!-- body content -->
+    <div>
+
+        <div class="col-12">
+            <span class="d-flex justify-content-center fs-4 p-3">Gate Entry Process Initiation</span>
+        </div>
+
+
+        <div class="container">
+            <div class="card p-3">
+                <form [formGroup]="login">
+                    <div class="row">
+                            <img src="../../assets/img/gateway.jpeg" class="col-4  col-4">
+
+                    <div class="col-4  col-4">
+                        <div>
+                            <div class="d-flex mt-3">
+                                <label class="border p-2 rounded w-16">Transition type</label>
+                                <select class="form-select w-16 ms-2"  formControlName="TransitionType" required>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <p *ngIf="login.get('TransitionType')?.touched&&login.get('TransitionType')?.hasError('required')" class=" text-danger">TransitionType required</p>
+                            <div class="d-flex mt-3">
+                                <label class="border p-2 w-16 rounded">Gate</label>
+                                <select class="form-select w-16 ms-2" formControlName="Gate" required>
+                                    
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <p *ngIf="login.get('Gate')?.touched&&login.get('Gate')?.hasError('required')" class=" text-danger">Gate required</p>
+                            <div class="d-flex mt-3">
+                                <label class="border p-2 w-16 rounded">bike number</label>
+                                <select class="form-select w-16 ms-2"  formControlName="b1">
+                                    
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <p *ngIf="login.get('b1')?.touched&&login.get('b1')?.hasError('required')" class=" text-danger">b1 required</p>
+                            <div class="d-flex mt-3">
+                                <label class="border p-2 w-16 rounded">bike number</label>
+                                <input class="form-control w-16 ms-2" type="text" formControlName="b2" required>
+                            </div>
+                            <p *ngIf="login.get('b2')?.touched&&login.get('b2')?.hasError('required')" class=" text-danger">b2 required</p>
+                            <div class="d-flex mt-3">
+                                <label class="border p-2 w-16 rounded">bike number</label>
+                                <input class="form-control w-16 ms-2" type="text"  formControlName="b3" required>
+                            </div>
+                            <p *ngIf="login.get('b3')?.touched&&login.get('b3')?.hasError('required')" class=" text-danger">b3 required</p>
+                        </div>
+                    </div>
+
+                    <div class="col-4  col-4">
+                        <div class="d-flex margin-top-26 ">
+                            <img src="../../assets/img/logo.jpeg">
+                            <label class="border p-3 rounded w-16">Transition type</label>
+                            <input class="form-control w-16 ms-2" type="text" formControlName="b4">
+                        </div>
+                        <p *ngIf="login.get('b4')?.touched&&login.get('b4')?.hasError('required')" class="text-danger">b4 required</p>
+                        <div class="d-flex justify-content-center mt-3">
+
+                            <button class="btn btn-secondary" (click)="submit()" [disabled]="login.invalid">GetData</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    <!-- body-content end -->

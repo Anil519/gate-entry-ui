@@ -1,0 +1,19 @@
+.bg-color-darkBule{
+ background-color: rgba(2, 25, 236, 0.233);
+}
+.ml-140{
+    margin-left: -140px;
+}
+.logo-width{
+    width: 30px;
+}
+a:hover{
+    background-color: rgb(15, 155, 15);
+    border-radius: 5px;
+}
+.w-16{
+    width: 68%;
+}
+.margin-top-26 {
+    margin-top: 25%;
+}

@@ -1,0 +1,32 @@
+import { Component } from '@angular/core';
+import { FormBuilder, FormControl,  Validators } from '@angular/forms';
+
+@Component({
+  selector: 'app-gate-entry',
+  templateUrl: './gate-entry.component.html',
+  styleUrls: ['./gate-entry.component.css']
+})
+export class GateEntryComponent {
+  constructor(private fb:FormBuilder){}
+  disableSelect = new FormControl(false);
+
+  login=this.fb.group({
+
+    TransitionType:[null,Validators.required],
+    Gate:[null,Validators.required],
+    b1:[null,Validators.required],
+    b2:[null,Validators.required],
+    b3:[null,Validators.required],
+    b4:[null,Validators.required]
+  
+  })
+  formvalid=this.login.status
+  submit(){
+    
+    console.log("aaa", this.login)
+    console.log(this.login.value)
+    console.log(this.login.status)
+
+  }
+
+}
