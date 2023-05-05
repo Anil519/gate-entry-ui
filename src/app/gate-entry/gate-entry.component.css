@@ -17,3 +17,11 @@ a:hover{
 .margin-top-26 {
     margin-top: 25%;
 }
+
+@media (max-width: 991.98px) { 
+
+    .margin-top-26 {
+        margin-top:5%;
+    }
+
+ }
