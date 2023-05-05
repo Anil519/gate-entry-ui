@@ -8,7 +8,7 @@ import { FormBuilder, FormControl,  Validators } from '@angular/forms';
 })
 export class GateEntryComponent {
   constructor(private fb:FormBuilder){}
-  disableSelect = new FormControl(false);
+  
 
   login=this.fb.group({
 
@@ -17,9 +17,14 @@ export class GateEntryComponent {
     b1:[null,Validators.required],
     b2:[null,Validators.required],
     b3:[null,Validators.required],
-    b4:[null,Validators.required]
+    b4:[null,Validators.required],
   
   })
+
+  reamount=this.fb.group({
+    rev_price:[500]
+  })
+  
   formvalid=this.login.status
   submit(){
     
